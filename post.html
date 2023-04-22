@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+	<div>
+		<input type="text"  placeholder="Name" id="one">
+		<input type="text" placeholder="id" id="two">
+		<button >send</button>
+	</div>
+	<script type="text/javascript">
+		function submit(){
+			var one=document.querySelector("#one").value
+			var two=document.querySelector("#two").value
+			console.log(one,two)
+			/*axios.post("https://reqres.in/api/users",{name:"arrary"})
+				.then((res)=>{
+					console.log(res.data)
+				})*/
+			/*axios.get("https://reqres.in/api/users?page=1")
+			.then((res)=>{
+				console.log(res.data)
+			})*/
+			/*axios.put("https://reqres.in/api/users/2",{name:"user2"})
+			.then((res)=>{
+				console.log(res.data)
+			})*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			/*fetch("https://reqres.in/api/users",{
+				method:"POST",
+				headers:{
+					"Content-Type":"application/json"
+				},
+				body:JSON.stringify({name:one,id:two})
+			})
+			.then((res)=>{
+				console.log(res)
+				return res.json()
+			})*/
+			/*
+			fetch("https://reqres.in/api/users/2",{
+				method:"PUT",
+				headers:{
+					"Content-Type":"application/json"
+				},
+				body:JSON.stringify({name:"user2"})
+			})
+			.then((res)=>{
+				console.log(res)
+				return res.json()
+			})
+			.then((res)=>{
+				console.log(res)
+			})*/
+			/*fetch("https://reqres.in/api/users/2",{
+				method:"DELETE",
+				headers:{
+					"Content-Type":"application/json"
+				},
+				
+			})
+			.then((res)=>{
+				console.log(res)
+			})*/
+
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style>
+		li{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<input placeholder="Search value" id="search" onkeyup="searchFunc()"/>
+	<ul type="none">
+		<li>Orange</li>
+		<li>Elephant</li>
+		<li>Cat</li>
+		<li>grape</li>
+		<li>Lion</li>
+		<li>Ntr</li>
+		<li>Rode</li>
+		<li>Demo</li>
+		<li>apply</li>
+		<li>react</li>
+	</ul>
+	<script type="text/javascript">
+		function searchFunc(){
+			var inputSearch=document.querySelector("#search").value
+			var listOfValues=document.getElementsByTagName("li")
+			inputSearch=inputSearch.toLowerCase();
+			console.log(inputSearch)
+			for(var i=0;i<listOfValues.length;i++){
+				if(!listOfValues[i].innerHTML.toLowerCase().includes(inputSearch)){
+					listOfValues[i].style.display="none"
+				}
+				else{
+					listOfValues[i].style.display="block"
+				}
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<section id="empinfo"></section>
+		<script type="text/javascript">
+			//for getting the data from server uses fetch method
+			fetch("https://reqres.in/api/users?page=2")
+			 .then((res)=>{
+			 	//console.log(res)
+			 	return res.json()
+			 })
+			 .then((jsonRes)=>{
+			 	console.log(jsonRes.data)
+			 	displayServerData(jsonRes.data)
+			 })
+			 function displayServerData(emp){
+			 	/*console.log("from function data is \n",emp)
+				emp.map((p)=>{
+				 	console.log(p.first_name)
+				 	console.log(p.email)
+				 })*/
+			 	var empinfo=document.querySelector("#empinfo")
+			 	emp.map((p)=>{
+			 		empinfo.innerHTML+=`
+			 		<div>
+			 			<p>${p.first_name}</p>
+			 			<p>${p.email}</p>
+			 			<img src="${p.avatar}" width="20%" alt=${p.first_name}/>
+			 		</div>`
+			 	})
+			 }
+		</script>
+</body>
+</html>
